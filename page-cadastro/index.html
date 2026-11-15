@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumigos</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <nav id="sidebar">
+            <div id="logo">
+                <a href="../page-login/index.html" onclick="sairDoSistema(event)" title="sair e voltar para o login">
+                    <img src="../cadrastados/logo-aumigos.png" id="logo-aumigos" alt="Avatar">
+                </a>
+            </div>
+            <ul id="side_items">
+                <li>
+                    <a href="../cadrastados/index.html" class="link-icone">
+                        <i><ion-icon name="home"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i><ion-icon name="paw"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="abrirTelaFinanceira(event)" class="link-icone">
+                        <ion-icon name="logo-usd"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="../controle-estoque/index.html">
+                        <ion-icon name="logo-dropbox"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="../controle-pessoas/index.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="container">
+<form class="formulario" id="form-cadastro">
+
+    <div class="topo">
+        <span>🐾</span>
+        Incluir cadastro animal
+        <a href="../cadrastados/index.html" class="botao-fechar">X</a>
+    </div>
+
+    <div class="conteudo">
+
+        <h4>INFORMAÇÕES BÁSICAS</h4>
+
+        <div class="grid">
+            <label class="campo">Nome:
+                <input name="nome">
+            </label>
+
+            <label class="campo">Espécie:
+                <input name="especie">
+            </label>
+
+            <label class="campo foto">Foto:
+                <input type="file" name="foto" accept="image/*">
+            </label>
+
+            <label class="campo">Idade:
+                <input name="idade">
+            </label>
+
+            <label class="campo">Raça:
+                <input name="raca">
+            </label>
+
+            <label class="campo">Porte:
+                <input name="porte">
+            </label>
+
+            <label class="campo">Sexo:
+                <input name="sexo">
+            </label>
+
+            <label class="campo">Peso:
+                <input name="peso">
+            </label>
+        </div>
+
+        <div class="campo-grupo">
+  <label for="status">Status:</label>
+  <select name="status" id="status">
+    <option value="EM ADOÇÃO">Em Adoção</option>
+    <option value="ADOTADO">Adotado</option>
+  </select>
+</div>
+
+
+        <label class="campo observacoes">
+            Observações sobre comportamento:
+            <textarea name="comportamento"></textarea>
+        </label>
+
+        <div class="secao">
+            <h4>INFORMAÇÕES SOBRE O RESGATE</h4>
+
+            <div class="resgate">
+                <label class="campo">Data do resgate:
+                    <input type="date" name="dataResgate">
+                </label>
+
+                <label class="campo">Local e origem:
+                    <input name="origem">
+                </label>
+
+                <label class="campo full">Condição que foi encontrado:
+                    <input name="condicao">
+                </label>
+            </div>
+        </div>
+
+        <div class="secao">
+            <h4>INFORMAÇÕES SOBRE A SAÚDE</h4>
+
+            <div class="saude">
+                <label class="campo">Situação Atual:
+                    <input name="situacao">
+                </label>
+
+                <label class="campo">Castração:
+                    <input name="castracao">
+                </label>
+
+                <label class="campo">Vacinas:
+                    <textarea name="vacinas"></textarea>
+                </label>
+
+                <label class="campo">Doenças:
+                    <input name="doencas">
+                </label>
+
+                <label class="campo full">Medicamentos:
+                    <input name="medicamentos">
+                </label>
+
+                <label class="campo full historico">Histórico de Consultas:
+                    <textarea name="historico"></textarea>
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="botoes">
+        <button type="button" id="btn-excluir">excluir</button>
+        <button type="reset">Limpar</button>
+        <button class="finalizar" type="submit">Finalizar</button>
+    </div>
+
+</form>
+</div>
+
+    </main>
+
+    <script src="../auth.js"></script>
+    <script src="script.js"></script>
+    <script  type = "module"  src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js " > </script> <script 
+    nomodule src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js " > </script>  
+</body>
+</html>

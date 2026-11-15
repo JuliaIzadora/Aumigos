@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body{
+    background-image: url(../cadrastados/fundo-ondas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a ion-icon {
+  pointer-events: none;
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100vh;
+    background-color: #5593db;  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+#logo {
+    margin-bottom: 50px;
+}
+
+#logo-aumigos {
+    width: 90px;
+    height: 75px;
+    object-fit: cover;
+}
+
+#side_items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    width: 100%;
+}
+
+#side_items li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#side_items a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    border-radius: 18px; 
+    transition: background-color 0.2s ease;
+}
+
+#side_items ion-icon {
+    font-size: 38px;
+    color: #ffffff;
+}
+
+#side_items a:hover,
+#side_items a.active {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.quadro-branco {
+  background: #ffffff;
+  border: 2px solid #b8cb73;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.cabecalho-quadro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #b8cb73;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.icone-titulo {
+  background: #b8cb73;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.grid-formulario, .grid-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.coluna-esquerda, .coluna-direita, .col-saldos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"], input[type="date"], textarea {
+  border: 1px solid #999;
+  border-radius: 15px;
+  padding: 8px 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.badge-status.aguardando {
+  background: #fdebd0;
+  border: 1px solid #f5b041;
+  color: #d35400;
+  text-align: center;
+  padding: 6px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.botoes-acao {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-cancelar {
+  background: #b2babb;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-finalizar {
+  background: #b8cb73;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card-info, .caixa-tabela {
+  border: 1px solid #999;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.colunas-despesas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 85%;
+}
+
+.despesa-fixa {
+  border-right: 1px solid #999;
+  padding-right: 10px;
+}
+
+.despesa-variavel {
+  padding-left: 15px;
+}
+
+.tabela-registros {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.tabela-registros th, .tabela-registros td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+}

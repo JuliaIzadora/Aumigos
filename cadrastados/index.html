@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumigos</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <nav id="sidebar">
+            <div id="logo">
+                <a href="../page-login/index.html" onclick="sairDoSistema(event)" title="sair e voltar para o login">
+                    <img src="logo-aumigos.png" id="logo-aumigos" alt="Avatar">
+                </a>
+            </div>
+            <ul id="side_items">
+                <li>
+                    <a href="#" >
+                        <i><ion-icon name="home"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../page-cadastro/index.html" class="link-icone">
+                        <i><ion-icon name="paw"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="abrirTelaFinanceira(event)" class="link-icone">
+                        <ion-icon name="logo-usd"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="../controle-estoque/index.html">
+                        <ion-icon name="logo-dropbox"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="../controle-pessoas/index.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+<main class="content-container">
+
+    <header class="search-bar-container">
+        <button class="filter-btn">
+            <ion-icon name="options-outline"></ion-icon>
+        </button>
+        <div class="search-input-wrapper">
+            <input type="text" placeholder="Pesquisar...">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        </div>
+    </header>
+    
+    <section class="pets-list">
+        
+        
+        <div class="modal-overlay" id="modalCadastro">
+        </div>
+    </section>
+</main>
+
+    <script src="../auth.js"></script>
+    <script src="script.js"></script>
+    <script  type = "module"  src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js " > </script> <script 
+    nomodule src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js " > </script>  
+</body>
+</html>
