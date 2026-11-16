@@ -1,0 +1,185 @@
+html, body{
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    background-color: #5796D7;
+    background-image: url(Fundo-aumigos.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+
+.Titulo{
+    color: #C3CD4C;
+    font-family: "Karla", sans-serif;
+    font-size: 80px;
+    font-weight: 770;
+}
+
+.usuario{
+    color: white;
+    font-size: 28px;
+    font-family: "Phetsarath", sans-serif;
+}
+
+.conteiner-password label{
+    display: block;
+    margin-bottom: 8px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.conteiner-password{
+    font-size: 20px;
+    font-family: "Phetsarath", sans-serif;
+}
+
+.input-com-icone{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon-cadeado{
+    color: white;
+}
+
+.input-password{
+    background-color: #3B5999;
+    border: none;
+    border-radius: 17px;
+    width: 250px;
+    height: 42px;
+}
+
+input:focus{
+    outline: none;
+    color: white;
+}
+
+input{
+    padding: 0 15px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.Button-login{
+    background-color: #B9C255;
+    font-size: 28px;
+    font-family: 'Piazolla';
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+}
+
+.Button-login:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3)
+}
+
+.conteiner-login{
+    margin-top: 180px;
+    margin-left: 450px;
+}
+
+.btn-secretaria{
+    background-color: #B9C255;
+    font-size: 15px;
+    font-family: 'Piazolla';
+    color: white;
+    border: none;
+    border-radius: 30px;
+    width: 130px;
+    height: 28px;
+    margin-left: 850px;
+    margin-top: 120px;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-card{
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 2px solid #B9C255;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.modal-header h2 {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid #E0E0E0;
+}
+
+.modal-footer button {
+    padding: 8px 25px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-excluir, .btn-limpar {
+    background-color: #9E9E9E;
+    color: white;
+}
+
+.btn-finalizar {
+    background-color: #B9C255;
+    color: white;
+}
+
+.modal-footer button:hover {
+    transform: translateY(-3px);
+
+}
