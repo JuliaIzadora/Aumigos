@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumigos</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <nav id="sidebar">
+            <div id="logo">
+                <a href="../page-login/index.html" onclick="sairDoSistema(event)" title="sair e voltar para o login">
+                    <img src="../cadrastados/logo-aumigos.png" id="logo-aumigos" alt="Avatar">
+                </a>
+            </div>
+            <ul id="side_items">
+                <li>
+                    <a href="../cadrastados/index.html" >
+                        <i><ion-icon name="home"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../page-cadastro/index.html" class="link-icone">
+                        <i><ion-icon name="paw"></ion-icon></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="abrirTelaFinanceira(event)" class="link-icone">
+                        <ion-icon name="logo-usd"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <ion-icon name="logo-dropbox"></ion-icon>
+                    </a>
+                </li>
+                <li>
+                    <a href="../controle-pessoas/index.html">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+        <main class="container-principal">
+    <div class="quadro-branco">
+      <div class="cabecalho-quadro">
+        <ion-icon name="cube" class="icone-verde"></ion-icon>
+        <h2>Controle de estoque •</h2>
+        <select id="filtro-categoria" class="select-titulo">
+          <option value="ALIMENTOS">ALIMENTOS</option>
+          <option value="MEDICAMENTOS">Medicamentos</option>
+          <option value="OUTROS MATERIAIS">Outros Materiais</option>
+        </select>
+      </div>
+
+      <div class="barra-ferramentas">
+        <div class="grupo-busca">
+          <select id="ordem-lista" class="select-ordem" title="Ordenar">
+            <option value="padrao">☰ Ordenar</option>
+            <option value="crescente">Ordem Crescente (A-Z)</option>
+            <option value="decrescente">Ordem Decrescente (Z-A)</option>
+          </select>
+          <input type="text" id="campo-pesquisa" placeholder="Pesquisar item...">
+        </div>
+        <button type="button" id="btn-abrir-modal" class="btn-novo">Novo Item</button>
+      </div>
+
+      <div class="tabela-wrapper">
+        <table class="tabela-sistema">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Item</th>
+              <th>Qntd.</th>
+              <th>Preço pago und</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela-estoque">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <div id="modal-item" class="modal-overlay" style="display: none;">
+    <div class="quadro-branco modal-box">
+      <div class="cabecalho-quadro space-between">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <ion-icon name="cube" class="icone-verde"></ion-icon>
+          <h2 id="titulo-modal">Incluir Novo item</h2>
+        </div>
+        <button type="button" id="btn-fechar-modal" class="btn-x">X</button>
+      </div>
+
+      <form id="form-estoque" class="grid-form">
+        <div class="col-form">
+          <label>Categoria:
+            <select name="categoria" id="modal-categoria" required>
+              <option value="ALIMENTOS">Alimentos</option>
+              <option value="MEDICAMENTOS">Medicamentos</option>
+              <option value="OUTROS MATERIAIS">Outros Materiais</option>
+            </select>
+          </label>
+          <label>ID: <input type="text" name="idItem" required></label>
+          <label>Descrição do Item: <input type="text" name="descricao" required></label>
+          <label>Quantidade em Estoque: <input type="number" name="quantidade" required></label>
+          <label>Valor Pago: <input type="text" name="valorPago" placeholder="R$ 0,00"></label>
+          <label>Valor Pago a und: <input type="text" name="valorUnd" placeholder="R$ 0,00" required></label>
+        </div>
+
+        <div class="col-form">
+          <label>Data de entrada: <input type="date" name="dataEntrada"></label>
+          <label>Data de validade: <input type="date" name="dataValidade"></label>
+        </div>
+
+        <div class="rodape-botoes">
+          <button type="button" id="btn-excluir-item" class="btn-cinza" style="display: none;">excluir</button>
+          <div style="display: flex; gap: 15px; margin-left: auto;">
+            <button type="reset" class="btn-cinza">Limpar</button>
+            <button type="submit" class="btn-verde">Finalizar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+    <script src="../auth.js"></script>
+    <script src="script.js"></script>
+    <script  type = "module"  src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js " > </script> <script 
+    nomodule src = " https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js " > </script>  
+</body>
+</html>

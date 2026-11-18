@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body{
+    background-image: url(../cadrastados/fundo-ondas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a ion-icon {
+  pointer-events: none;
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 110px;
+    height: 100vh;
+    background-color: #5593db;  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+#logo {
+    margin-bottom: 50px;
+}
+
+#logo-aumigos {
+    width: 90px;
+    height: 75px;
+    object-fit: cover;
+}
+
+#side_items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    width: 100%;
+}
+
+#side_items li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#side_items a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    text-decoration: none;
+    border-radius: 18px; 
+    transition: background-color 0.2s ease;
+}
+
+#side_items ion-icon {
+    font-size: 38px;
+    color: #ffffff;
+}
+
+#side_items a:hover,
+#side_items a.active {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.container-principal {
+  margin-left: 85px;
+  flex-grow: 1;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.quadro-branco {
+  background: #ffffff;
+  border: 2px solid #b8cb73;
+  border-radius: 10px;
+  padding: 25px;
+  width: 100%;
+  max-width: 920px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cabecalho-quadro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #b8cb73;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+.cabecalho-quadro.space-between {
+  justify-content: space-between;
+}
+
+.cabecalho-quadro h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.icone-verde {
+  color: #b8cb73;
+  font-size: 26px;
+}
+
+.icone-verde-outline {
+  color: #b8cb73;
+  font-size: 26px;
+}
+
+.select-titulo {
+  border: 1px solid #999;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.barra-ferramentas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.grupo-busca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.select-ordem {
+  border: 1px solid #999;
+  border-radius: 15px;
+  padding: 6px 12px;
+  background: #fff;
+  cursor: pointer;
+}
+
+#campo-pesquisa, #pesquisa-pessoa {
+  border: 1px solid #999;
+  border-radius: 15px;
+  padding: 6px 15px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn-novo, .btn-verde {
+  background: #b8cb73;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-cinza {
+  background: #999999;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-x {
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Tabela estilo planilha limpa */
+.tabela-wrapper {
+  border: 1px solid #ccc;
+  min-height: 380px;
+  background: #fff;
+}
+
+.tabela-sistema {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-sistema th, .tabela-sistema td {
+  border: 1px solid #d0d0d0;
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.tabela-sistema th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.tabela-sistema tbody tr:hover {
+  background-color: #f9fbe7;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  max-width: 780px;
+  margin: 20px;
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.col-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.col-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+  gap: 5px;
+}
+
+.col-form input, .col-form select {
+  border: 1px solid #999;
+  border-radius: 12px;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.btn-upload-doc {
+  border: 1px solid #999;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 26px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rodape-botoes {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
