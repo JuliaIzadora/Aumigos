@@ -8,8 +8,12 @@ if (formLogin) {
     const campoSenha = formLogin.querySelector('.input-password');
     const senha = campoSenha.value.trim();
 
+    // Define senhas padrão ou busca se o usuário já alterou e salvou no localStorage
+    let senhaDonaCorreta = localStorage.getItem('senha_dona') || 'dona123';
+    let senhaSecCorreta = localStorage.getItem('senha_sec') || 'sec123';
+
     if (perfil === 'dona') {
-      if (senha === 'dona123') {
+      if (senha === senhaDonaCorreta) {
         localStorage.setItem('perfilLogado', 'dona');
         window.location.href = '../cadrastados/index.html';
       } else {
@@ -18,7 +22,7 @@ if (formLogin) {
       }
     } 
     else if (perfil === 'secretaria') {
-      if (senha === 'sec123') {
+      if (senha === senhaSecCorreta) {
         localStorage.setItem('perfilLogado', 'secretaria');
         window.location.href = '../cadrastados/index.html'; 
       } else {

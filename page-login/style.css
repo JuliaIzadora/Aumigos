@@ -183,3 +183,8 @@ input{
     transform: translateY(-3px);
 
 }
+
+.esqueci-senha{
+    color: white;
+    font-size: 14px;
+}
